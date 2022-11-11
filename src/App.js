@@ -14,8 +14,7 @@ import Alert from './components/Alert';
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
