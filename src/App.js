@@ -19,7 +19,7 @@ import {
 
 function App() {
   const [mode, setMode] = useState('light');
-
+  const basePath = "/TextUtils";
   const toggleMode=()=>{
     if(mode==='light'){
       setMode('dark');
@@ -51,13 +51,13 @@ function App() {
     
     <>
     <BrowserRouter>
-      <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode}/>   {/*navbar component*/}
+      <Navbar title="TextUtils" aboutText="About TextUtils" basePath={basePath} mode={mode} toggleMode={toggleMode}/>   {/*navbar component*/}
       <Alert alert ={alert}/>
       <div className="container my-3">
       <Routes>
-          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path={basePath+"/about"} element={<About mode={mode} />} />
           
-          < Route exact path="/"
+          < Route exact path={basePath+"/"}
             element= {<TextForm heading="Enter the text to analyse: " mode={mode} showAlert={showAlert}/>} /> 
       </Routes>
       </div>
