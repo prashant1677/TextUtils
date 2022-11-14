@@ -25,13 +25,13 @@ function App() {
       setMode('dark');
       document.body.style.background='#042743';
       showAlert("success","Dark mode has been enabled");
-      document.title="TextUtils - Dark Mode";
+      // document.title="TextUtils - Dark Mode";
     }
     else {
       setMode('light');
       document.body.style.background='white';
       showAlert("success","Light mode has been enabled");
-      document.title="TextUtils - Light Mode";
+      // document.title="TextUtils - Light Mode";
 
     }
   }
@@ -41,7 +41,7 @@ function App() {
   const showAlert = (type,msg)=>{
     setAlert({
       type:type,
-      message:": "+msg
+      message:msg
     })
     setTimeout(()=>{
       setAlert(null);

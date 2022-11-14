@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
     <div className="container-fluid">
       <Link className="navbar-brand" to={props.basePath+"/"}>{props.title}</Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -16,24 +16,17 @@ export default function Navbar(props) {
           </li>
           <li className="nav-item">
             <Link className="nav-link active" aria-current="page" to={props.basePath+"/About"}>About</Link>
-          </li>
-          {/* <li className="nav-item">
-            <a className="nav-link" href="/">{props.aboutText}</a>
-          </li> */}
-         
+          </li>      
          
         </ul>
-        {/* <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <but  ton className="btn btn-primary" type="submit">Search</but>
-        </form> */}
 
-<div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'}`}>
-  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggleMode} />
-  <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Enable Dark Mode</label>
-</div>
+        <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'}`}>
+          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggleMode} />
+          <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Enable Dark Mode</label>
+        </div>
       </div>
     </div>
+    
   </nav>
   )
 }
